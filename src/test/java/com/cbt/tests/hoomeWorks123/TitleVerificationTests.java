@@ -1,6 +1,6 @@
-package com.cbt.tests;
+package com.cbt.tests.hoomeWorks123;
 
-import com.cbt.utilities.BrowserFactory;
+import com.cbt.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Arrays;
@@ -12,7 +12,7 @@ public class TitleVerificationTests {
                                           "http://practice.cybertekschool.com/dropdown",
                                           "http://practice.cybertekschool.com/login");
 
-        WebDriver driver = BrowserFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
 
         driver.get("https://google.com");
         Thread.sleep(2000);
@@ -32,7 +32,7 @@ public class TitleVerificationTests {
         driver.close();
 
 
-        WebDriver driver2 = BrowserFactory.getDriver("chrome");
+        WebDriver driver2 = WebDriverFactory.getDriver("chrome");
 
         driver2.get("https://google.com");
         Thread.sleep(2000);
@@ -52,7 +52,7 @@ public class TitleVerificationTests {
         driver2.close();
 
 
-        WebDriver driver3 = BrowserFactory.getDriver("chrome");
+        WebDriver driver3 = WebDriverFactory.getDriver("chrome");
 
         driver3.get("https://google.com");
         Thread.sleep(2000);
@@ -72,7 +72,7 @@ public class TitleVerificationTests {
         driver3.close();
 
 
-        WebDriver driver4 = BrowserFactory.getDriver("chrome");
+        WebDriver driver4 = WebDriverFactory.getDriver("chrome");
 
         driver4.get("http://practice.cybertekschool.com/");
         Thread.sleep(2000);
@@ -93,7 +93,7 @@ public class TitleVerificationTests {
         driver4.close();
 
 
-        WebDriver driver5 = BrowserFactory.getDriver("chrome");
+        WebDriver driver5 = WebDriverFactory.getDriver("chrome");
 
         driver5.get("http://practice.cybertekschool.com/dropdown");
         Thread.sleep(2000);
@@ -114,7 +114,7 @@ public class TitleVerificationTests {
         driver5.close();
 
 
-        WebDriver driver6 = BrowserFactory.getDriver("chrome");
+        WebDriver driver6 = WebDriverFactory.getDriver("chrome");
 
         driver6.get("http://practice.cybertekschool.com/login");
         Thread.sleep(2000);

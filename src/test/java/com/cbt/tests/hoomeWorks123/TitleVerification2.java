@@ -1,13 +1,12 @@
-package com.cbt.tests;
+package com.cbt.tests.hoomeWorks123;
 
-import com.cbt.utilities.BrowserFactory;
+import com.cbt.utilities.WebDriverFactory;
 import com.cbt.utilities.StringUtility;
 import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.ListIterator;
 
 public class TitleVerification2 {
     public static void main(String[] args) throws InterruptedException {
@@ -19,7 +18,7 @@ public class TitleVerification2 {
         List<String> titles = new ArrayList<>();
         List<String> actualUrls = new ArrayList<>();
 
-        WebDriver driver = BrowserFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
 
         for(String url : urls){
             driver.get(url);

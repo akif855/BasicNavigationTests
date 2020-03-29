@@ -1,6 +1,6 @@
-package com.cbt.tests;
+package com.cbt.tests.hoomeWorks123;
 
-import com.cbt.utilities.BrowserFactory;
+import com.cbt.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class WikipediaUrlVerify {
     public static void main(String[] args) throws InterruptedException {
-        WebDriver driver = BrowserFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
 
         driver.get("https://www.wikipedia.org/");
         Thread.sleep(2000);

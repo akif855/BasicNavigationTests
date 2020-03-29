@@ -7,7 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class BrowserFactory {
+public class WebDriverFactory {
 
     public static WebDriver getDriver(String browserType){
 

@@ -1,6 +1,6 @@
-package com.cbt.tests;
+package com.cbt.tests.hoomeWorks123;
 
-import com.cbt.utilities.BrowserFactory;
+import com.cbt.utilities.WebDriverFactory;
 import com.cbt.utilities.StringUtility;
 import org.openqa.selenium.WebDriver;
 
@@ -14,7 +14,7 @@ public class TitleVerification3 {
         List<String> webBrowser = Arrays.asList("chrome","firefox","edge");
 
         for(String browsers : webBrowser) {
-            WebDriver driver = BrowserFactory.getDriver(browsers);
+            WebDriver driver = WebDriverFactory.getDriver(browsers);
 
             List<String> urls = Arrays.asList("https://luluandgeorgia.com",
                     "https://wayfair.com",

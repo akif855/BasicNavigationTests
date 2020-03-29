@@ -1,16 +1,13 @@
-package com.cbt.tests;
+package com.cbt.tests.hoomeWorks123;
 
-import com.cbt.utilities.BrowserFactory;
+import com.cbt.utilities.WebDriverFactory;
 import com.cbt.utilities.StringUtility;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-
-import java.util.TreeSet;
 
 public class NavigationTests {
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriver driver = BrowserFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.get("https://google.com");
         Thread.sleep(2000);
@@ -35,7 +32,7 @@ public class NavigationTests {
         driver.close();
 
 
-        WebDriver driver2 = BrowserFactory.getDriver("firefox");
+        WebDriver driver2 = WebDriverFactory.getDriver("firefox");
         driver2.manage().window().maximize();
         driver2.get("https://google.com");
         Thread.sleep(2000);
@@ -61,7 +58,7 @@ public class NavigationTests {
 
 
 
-        WebDriver driver3 = BrowserFactory.getDriver("edge");
+        WebDriver driver3 = WebDriverFactory.getDriver("edge");
         driver3.manage().window().maximize();
         driver3.get("https://google.com");
         Thread.sleep(2000);

@@ -1,5 +1,10 @@
 package com.cbt.utilities;
 
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class StringUtility {
     public static void verifyEquals(String expected, String actual) {
         if (expected.equals(actual)) {
@@ -29,4 +34,17 @@ public class StringUtility {
             System.out.println("url = " + url);
         }
     }
+    /**
+     * takes a list of web elements
+     * returns a list of Strings
+     */
+
+    public static List<String> getElementsText(List<WebElement> listEl){
+        List<String> listSt = new ArrayList<>();
+        for (WebElement element : listEl){
+            listSt.add(element.getText().trim());
+        }
+        return listSt;
+    }
+
 }

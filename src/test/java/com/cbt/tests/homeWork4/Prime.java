@@ -44,18 +44,30 @@ public class Prime {
         searchField.sendKeys("wooden spoon" + Keys.ENTER);
 
         Thread.sleep(2000);
-        WebElement beforeFirstResult = driver.findElement(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[2]"));
+        WebElement beforeFirstResult = driver.findElement(By.xpath("(//span[@style='-webkit-line-clamp: 2; -webkit-box-orient: vertical;'])[2]"));
+        String before = beforeFirstResult.getText();
 
         Thread.sleep(2000);
         WebElement prime = driver.findElement(By.xpath("//li[@aria-label='Prime Eligible']//label/i"));
         prime.click();//TODO clicking prime
 
         Thread.sleep(2000);
-        WebElement afterFirstResult = driver.findElement(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[2]"));
+        WebElement afterFirstResult = driver.findElement(By.xpath("(//span[@style='-webkit-line-clamp: 2; -webkit-box-orient: vertical;'])[2]"));
+        String after = afterFirstResult.getText();
 
-       // Assert.assertEquals(beforeFirstResult, afterFirstResult);
+       // TODO verify that before result is same as after
+        Assert.assertEquals(before, after);
 
+        Thread.sleep(2000);
+        WebElement brand = driver.findElement(By.xpath("//li[@aria-label='Folkulture']//label/i"));
+        brand.click();//TODO clicking brand
+
+        Thread.sleep(2000);
+        WebElement brandResult = driver.findElement(By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-4'])[1]"));
+        String brand2 = brandResult.getText();
+
+        //TODO verify first result that has prime label is different
+        Assert.assertNotEquals(after, brand2);
     }
-
 }
 
